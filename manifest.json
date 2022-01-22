@@ -1,0 +1,29 @@
+{
+  "manifest_version": 2,
+  "name": "Whatsapp Blur Names for Twitch Streamers",
+  "version": "1.0",
+  "author": "Daniel Yepez Garces",
+  "description": "Hide Whatsapp names or numbers to avoid Twitch bans for privacy",
+
+  "content_scripts": [{
+    "js": ["content.js"],
+    "matches": ["*://*.whatsapp.com/*"]
+  }],
+
+  "icons": {
+    "128": "icons/icon_128.png"
+  },
+
+  "browser_action": {
+    "default_title": "Whatsapp Blur Names",
+    "default_icon": "icons/icon_128_disabled.png"
+  },
+
+  "background": {
+    "scripts": ["background.js"]
+  },
+
+  "web_accessible_resources": ["styles.css"],
+
+  "permissions": ["*://*.whatsapp.com/*"]
+}
